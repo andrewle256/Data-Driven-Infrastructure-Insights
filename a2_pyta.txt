@@ -1,0 +1,41 @@
+[ELIF]
+
+output-format = python_ta.reporters.PlainReporter
+
+# Set maximum allowed nesting.
+max-nested-blocks = 3
+
+# Set maximum number of branches.
+max-branches = 4
+
+# Set maximum number of arguments.
+max-args = 5
+
+[FORMAT]
+
+# Set the maximum line length. The maximum line length in pep8 is 80 characters.
+max-line-length = 80
+
+[FORBIDDEN IMPORT]
+
+# Set the whitelist of modules that are allowed to be imported
+allowed-import-modules=doctest, unittest, python_ta, typing, constants, csv, math, copy
+
+[FORBIDDEN IO]
+
+# Comma-separated names of functions that are allowed to contain IO actions
+allowed-io =
+
+[MESSAGES CONTROL]
+
+# Disable the message, report, category or checker with the given id(s).
+disable= R0903, R0904  # min/max-public-methods
+    , W0105  # pointless-string-statement
+    , C0123  # Using type() instead of isinstance()
+    , C0200  # consider using enumerate
+    , C0327, C0328  # line endings LF and CRLF
+    , W0231  # super init not called
+    , C0413  # wrong-import-position
+    , W0611  # W0611 unused import
+    , R1706  # consider using ternary
+    , R1714  # consider using in
